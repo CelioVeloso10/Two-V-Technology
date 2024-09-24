@@ -6,26 +6,70 @@ body {
 /* Navbar */
 .navbar {
     padding: 1rem 0;
-}
-
-.navbar-nav {
-    text-align: center;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #00d4ff;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
 }
 
 .nav-item {
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .nav-link {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #d1d1d1;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+    color: #00d4ff;
+}
 
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #1EB845;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Adiciona margin para o botão de hambúrguer no mobile */
+@media (max-width: 767px) {
+    .navbar-toggler {
+        margin-right: 15px; /* Adiciona margem ao botão de menu */
+    }
+}
+
+/* Navbar - Efeito de transição ao rolar a página */
+.navbar.scrolled {
+    background-color: #151515;
+}
 
 /* Estilo do header com efeito parallax */
 .parallax-header {
@@ -190,18 +234,174 @@ a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
     }
 }
 
-/* Seção de Serviços */
-.services-section {
-    background-color: #111;
+/* Estilo da Seção Sobre Nós */
+#about {
+    background: linear-gradient(to right, #1f1f1f, #2b2b2b);
     color: #fff;
-    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Seção de Serviços */
-.services-section {
-    background-color: #111;
+#about .container {
+    z-index: 2;
+    position: relative;
+}
+
+#about h2 {
+    font-size: 2.5rem;
     color: #fff;
-    padding: 100px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+.about-box {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-box i {
+    color: #1EB845;
+    transition: color 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.about-box:hover i {
+    color: #ffffff;
+}
+
+/* Estilo da Equipe */
+.team-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-box {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.team-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-box:hover .team-img {
+    transform: scale(1.1);
+}
+
+.team-info {
+    margin-bottom: 10px;
+}
+
+.team-info h5 {
+    font-size: 1.4rem;
+    color: #1EB845;
+    font-weight: bold;
+}
+
+.team-info p {
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+.team-description {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Animações */
+.animate-title {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-box {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 1s;
+}
+
+.animate-team {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1.4s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* Keyframes para animações */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animações */
+.animate-title {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-box {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Keyframes para animações */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Estilo das caixas de serviço */
@@ -215,41 +415,36 @@ a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
     overflow: hidden;
     text-align: center;
     border: 1px solid #333;
-    /* Adiciona margem para espaçamento */
     margin-bottom: 30px;
-    /* Flexbox para garantir altura consistente */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Alinhamento das colunas */
+/* Alinhamento das colunas e centralização */
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Centraliza as colunas */
 }
 
 /* Ajusta as colunas para espaçamento */
 .col-md-4 {
-    padding: 0 15px; /* Adiciona espaçamento horizontal */
-}
-
-/* Ajusta a largura e espaçamento das colunas */
-.col-md-4 {
-    flex: 1 1 calc(33.333% - 30px); /* Ajusta a largura da coluna com base no espaçamento */
-    max-width: calc(33.333% - 30px); /* Ajusta a largura máxima da coluna com base no espaçamento */
-}
-
-/* Garantir que as caixas tenham a mesma altura */
-.service-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 0 15px;
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
 }
 
 /* Espaçamento entre linhas de colunas */
 .row > [class*='col-'] {
     margin-bottom: 30px;
+}
+
+/* Garante que as caixas tenham a mesma altura */
+.service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Estilo do ícone */
@@ -316,3 +511,33 @@ a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
     
 }
 
+.btn-gradient {
+    background: linear-gradient(45deg, #005921, #012a36);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-gradient i {
+    transition: margin-left 0.3s;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #0394c0, #005921);
+    transform: scale(1.05);
+}
+
+.btn-gradient:hover i {
+    margin-left: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
