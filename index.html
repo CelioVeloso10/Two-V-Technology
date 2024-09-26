@@ -10,18 +10,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <head>
+        <link rel="icon" href="img/ico.png" type="image/png" sizes="100x100">
+        <meta name="google-site-verification" content="JuYi-6UxzxgNY_jOWsyz_ySam0oyaJ5SFGxbcnqLkkU" />
 </head>
+
 <body class="bg-dark text-light">
     <!-- Cursor personalizado -->
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Two V Technology</a>
+        <!-- Logo no canto esquerdo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/LogoDark.png" alt="Two V Technology Logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <!-- Links no canto direito -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
@@ -31,19 +39,27 @@
     </div>
 </nav>
 
+
     
 
-    <!-- Header com efeito parallax -->
+<!-- Header com efeito parallax e animação -->
+<header class="parallax-header d-flex align-items-center justify-content-center">
+    <div class="content text-center">
+        <!-- Mensagem inicial -->
+        <h1 class="welcome-message">Seja bem-vindo à</h1>
+        <!-- Logo animada -->
+        <img src="img/Twov5.png" alt="Two V Technology Logo" class="logo">
+        <!-- Descrição abaixo da logo -->
+        <p class="description">Sua Empresa de consultoria especializada em T.I</p>
+        <!-- Botão Saiba Mais -->
+        <button class="btn btn-gradient" id="learnMore">
+            <i class="fas fa-arrow-right"></i> Saiba Mais
+        </button>
+    </div>
+</header>
 
-    <header class="parallax-header text-white text-center d-flex align-items-center justify-content-center">
-        <div class="content">
-            <h1>Bem-vindo à Two V Technology</h1>
-            <p>Soluções tecnológicas inovadoras para o seu negócio</p>
-            <button class="btn btn-gradient" id="learnMore">
-                <i class="fas fa-arrow-right"></i> Saiba Mais
-            </button>
-        </div>
-    </header>
+
+
     
 <!-- Sobre nós -->
 <section id="about" class="py-5">
@@ -73,7 +89,7 @@
                 <div class="about-box animate-box">
                     <i class="fas fa-lock fa-3x mb-4"></i>
                     <h4>Segurança e Confiança</h4>
-                    <p>Garantimos segurança digital robusta e contamos com certificações reconhecidas para proteger seus dados e processos.</p>
+                    <p>Garantimos segurança digital e contamos com certificações para proteger seus dados e processos.</p>
                 </div>
             </div>
         </div>
@@ -82,7 +98,7 @@
             <!-- Diretor 1: Célio Veloso -->
             <div class="col-md-6">
                 <div class="team-box animate-team">
-                    <img src="https://via.placeholder.com/150" alt="Célio Veloso" class="team-img">
+                    <img src="img/CelioVeloso.png" alt="Célio Veloso" class="team-img">
                     <div class="team-info">
                         <h5>Célio Veloso</h5>
                         <p>Diretor de Desenvolvimento</p>
@@ -93,7 +109,7 @@
             <!-- Diretor 2: Victor Hugo -->
             <div class="col-md-6">
                 <div class="team-box animate-team">
-                    <img src="https://via.placeholder.com/150" alt="Victor Hugo" class="team-img">
+                    <img src="img/VictorVeloso.png" alt="Victor Hugo" class="team-img">
                     <div class="team-info">
                         <h5>Victor Veloso</h5>
                         <p>Diretor de TI</p>
@@ -131,7 +147,7 @@
                 <div class="service-box">
                     <i class="fas fa-shield-alt fa-3x mb-4"></i>
                     <h4>Firewall e VPN</h4>
-                    <p>Segurança avançada para proteger seus dados e conexões.</p>
+                    <p>Possua segurança avançada para proteger seus dados e conexões.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -210,7 +226,7 @@
         <h2 class="mb-5">Solicite sua Consultoria</h2>
         <p class="mb-4">Entre em contato conosco via WhatsApp e descubra como podemos transformar o seu negócio com soluções tecnológicas inovadoras.</p>
         
-        <a href="https://wa.me/5511999999999" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/5562981716544" target="_blank" class="btn-whatsapp">
             <i class="fab fa-whatsapp fa-2x"></i> Solicitar Consultoria
         </a>
         
@@ -226,7 +242,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        <p>&copy; 2024 <span style="color: #1EB845; text-decoration: solid;" >Two V Technology</span>. Todos os direitos reservados.</p>
     </footer>
     <!-- Adicione os scripts ao final do body -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
